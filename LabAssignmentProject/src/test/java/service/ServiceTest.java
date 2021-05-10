@@ -99,6 +99,14 @@ class ServiceTest {
 
     @org.junit.jupiter.api.Test
     void extendDeadline() {
+        int res = service.extendDeadline("1", 2);
+        assertTrue(res == 1);
+    }
+
+    @org.junit.jupiter.api.Test
+    void extendDeadline2() {
+        int res = service.extendDeadline("2", 100);
+        assertTrue(res == 0);
     }
 
     @org.junit.jupiter.api.Test
